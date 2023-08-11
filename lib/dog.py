@@ -1,10 +1,10 @@
 from models import Dog
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, create_engine
+
 # engine = create_engine('sqlite:///:memory:')
 
 def create_table(base, engine):
-    pass
-    # base.metadata.create.all(engine)
+    base.metadata.create_all(engine)
     
 
 def save(session, dog):
